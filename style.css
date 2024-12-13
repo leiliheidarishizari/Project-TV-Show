@@ -1,4 +1,4 @@
-
+/* Styling for the root element */
 /* Base styles */
 body {
   font-family: Arial, sans-serif;
@@ -62,3 +62,4 @@ header a:hover {
   font-weight: bold;
   margin-top: 0.5rem;
 }
+
