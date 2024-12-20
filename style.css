@@ -7,6 +7,8 @@ body {
   line-height: 1.5;
 }
 
+/* Nadika's comment - I don't see a <header> tag in your code. You can either remove all references to the <header> tag in your CSS or add the <header> tag to your HTML. */
+
 header {
   background-color: #333;
   color: white;
@@ -40,7 +42,8 @@ header a:hover {
 
 .episode-card img {
   width: 100%;
-  display: block;
+  display: block; 
+  /* Nadika's comment - I am not sure if we need to use display: block. It doesn't make a big difference. */
 }
 
 .episode-card .content {
@@ -50,6 +53,8 @@ header a:hover {
 .episode-card h3 {
   margin: 0 0 0.5rem;
   font-size: 1.2rem;
+  /* Nadika's comment - If you want to place the episode header on the same line as the episode code,
+    you can apply 'display: inline;' to the <h3>tag. */
 }
 
 .episode-card p {
@@ -61,5 +66,6 @@ header a:hover {
 .episode-card .episode-code {
   font-weight: bold;
   margin-top: 0.5rem;
+  /* Nadika's comment - I am not sure if we need to use margin-top: 0.5rem. It doesn't make a big difference. */
 }
 
