@@ -25,14 +25,21 @@ function makePageForEpisodes(episodeList) {
     const episodeTitle = document.createElement("h3");
     episodeTitle.textContent = episode.name;
 
-    // Episode code
-    const episodeCode = document.createElement("p");
+    // Episode code (using <span> instead of <p>)
+    const episodeCode = document.createElement("span"); 
+    // Nadika's comment - I prefer to put this details in a <span> tag. We usually use it for styling small details.
     episodeCode.classList.add("episode-code");
     episodeCode.textContent = getEpisodeCode(episode);
 
     // Summary
     const episodeSummary = document.createElement("p");
     episodeSummary.innerHTML = episode.summary;
+    // Nadika's comment - It's good practice to add a class to style an element in the future.
+
+    // Nadika's comment - If we open the webpage code in the browser, we can see that Summary will be surrounded by two <p> tags.
+    // To remove the <p> tags from the original array or remove any existing <p> tags from the summary content:
+    // const summaryContent = episode.summary.replace(/<\/?p>/g, '');
+    // episodeSummary.innerHTML = summaryContent;
 
     // Append content to card
     contentDiv.appendChild(episodeTitle);
@@ -47,12 +54,15 @@ function makePageForEpisodes(episodeList) {
 }
 
 function getEpisodeCode(episode) {
-  const season = String(episode.season).padStart(2, "0");
-  const number = String(episode.number).padStart(2, "0");
-  return `S${season}E${number}`;
+  const seasonNum = String(episode.season).padStart(2, "0"); 
+  // Nadika's comment - I think this variable is better called 'seasonNum' to be consistent with the name of the variable below.
+  const episodeNum = String(episode.number).padStart(2, "0"); 
+  // Nadika's comment - I think this variable is better called 'episodeNum' to make it clear what the number represents.
+  return `S${seasonNum}E${episodeNum}`;
 }
 
 // Run setup when the page loads
 window.onload = setup;
+
 
 
