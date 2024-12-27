@@ -1,4 +1,3 @@
-//You can edit ALL of the code here
 function setup() {
   const allEpisodes = getAllEpisodes();
   makePageForEpisodes(allEpisodes);
@@ -55,4 +54,5 @@ function getEpisodeCode(episode) {
 
 // Run setup when the page loads
 window.onload = setup;
+
 
