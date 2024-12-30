@@ -23,6 +23,31 @@ header a:hover {
   text-decoration: underline;
 }
 
+/* Start Nadika's style for search */
+#search-block {
+  width: 98%; 
+  margin: 0 auto 20px;
+
+}
+#search-input{
+  padding: 10px;
+  flex: 1;
+  margin-right: 10px;
+}
+#search-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#search-result{
+  flex: 1;
+  text-align: right;
+}
+#episode-selector{
+  padding: 10px;
+}
+/* End Nadika's style for search */
 #root {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -66,3 +91,5 @@ header a:hover {
   margin-top: 0.5rem;
   /* Nadika's comment - I am not sure if we need to use margin-top: 0.5rem. It doesn't make a big difference. */
 }
+
+
