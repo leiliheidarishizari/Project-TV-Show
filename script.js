@@ -43,7 +43,7 @@ function displayShowList(shows) {
   rootElem.innerHTML = "";
   shows.forEach((show) => {
     const showCard = document.createElement("div");
-    showCard.className = "show-card";
+  
 
     const showImage = document.createElement("img");
     showImage.src = show.image ? show.image.medium : "placeholder.jpg";
