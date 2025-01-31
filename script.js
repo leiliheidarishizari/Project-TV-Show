@@ -145,11 +145,11 @@ function getEpisodeCode(episode) {
   return `S${String(episode.season).padStart(2, "0")}E${String(episode.number).padStart(2, "0")}`;
 }
 
-// Create a dropdown selector for shows and a search bar
+// Get or create the container for the dropdown and ensure it has a consistent ID
 function createShowSelector(shows) {
   const selectorBlock = document.getElementById("selector-block") || document.createElement("div");
   selectorBlock.id = "selector-block";
-  selectorBlock.innerHTML = ""; // Clear existing content
+  selectorBlock.innerHTML = ""; // Clear existing content to prevent duplicate elements(dropdown)
 
   // Create the dropdown selector
   const showSelector = document.createElement("select");
@@ -171,7 +171,7 @@ function createShowSelector(shows) {
 
   // Handle show selection changes
   showSelector.addEventListener("change", async (event) => {
-    const showId = event.target.value;
+    const showId = event.target.value;//stores the ID of the selected show in the showId variable
     if (showId === "all") {
       displayShowList(allShows); // Show all shows if "all" is selected
     } else {
@@ -189,7 +189,7 @@ function createShowSelector(shows) {
 
   // Append the selector and search bar to the selector block
   selectorBlock.append(showSelector, searchInput);
-  document.body.insertBefore(selectorBlock, rootElem); // Insert the block above the root element
+  document.body.insertBefore(selectorBlock, rootElem); // Insert the block above the root element for UI structure
 }
 
 // Handle search functionality for shows
